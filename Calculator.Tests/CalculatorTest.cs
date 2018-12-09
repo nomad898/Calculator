@@ -34,11 +34,12 @@ namespace Calculator.Tests
             mockOperation.Setup(x => x.Execute()).Returns(expected);
             ICalculator calculator = new ClassLibrary.Calculator(mockOperation.Object);
 
-            //Act 
+            //Act
             var result = calculator.CallOperation();
 
             //Assert
             Assert.That(result, Is.EqualTo(expected));
+            mockOperation.VerifyAll();
         }
     }
 }
