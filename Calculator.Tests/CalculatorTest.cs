@@ -10,7 +10,7 @@ namespace Calculator.Tests
     class CalculatorTest
     {
         [Test]
-        public void CallOperation_MockOperationWithLoose_ReturnsThatRealEqualsToExpected()
+        public void CallOperation_MockOperationWithLooseBehavour_ReturnsThatRealEqualsToExpected()
         {
             //Arrange
             var mockOperation = new Mock<IOperation>(MockBehavior.Loose);
@@ -26,7 +26,7 @@ namespace Calculator.Tests
         }
 
         [Test]
-        public void CallOperation_MockOperationWithStrict_ReturnsTrue()
+        public void CallOperation_MockOperationWithStrictBehavour_ReturnsThatRealEqualsToExpected()
         {
             //Arrange
             var mockOperation = new Mock<IOperation>(MockBehavior.Strict);
